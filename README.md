@@ -1,9 +1,9 @@
 # turing-chat
 ![python](https://img.shields.io/badge/python-2.7-ff69b4.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag)
 
-turing-chat是一个开源的微信聊天机器人，基于[littlecodersh](https://github.com/littlecodersh)的[ItChat](https://github.com/littlecodersh/ItChat)项目， 接入[图灵机器人](http://www.tuling123.com/)提供自然语言回复。
+turing-chat是一个开源的微信聊天机器人，基于 [littlecodersh](https://github.com/littlecodersh) 的 [ItChat](https://github.com/littlecodersh/ItChat) 项目， 接入[图灵机器人](http://www.tuling123.com/)提供自然语言回复。
 
-## 使用方法
+## 快速开始
 1. 下载项目中的wechat.py文件
 
 1. 安装Python及依赖包
@@ -23,9 +23,37 @@ turing-chat是一个开源的微信聊天机器人，基于[littlecodersh](https
 
 1. 执行wechat.py
 
-## 功能
-- [x] 响应好友、群聊中的文本消息，并进行自动回复
-- [x] 自动下载图片、表情消息
-- [x] 在服务端显示消息记录
-- [ ] 响应更多消息
-- [ ] 完善兼容性
+
+## 响应消息类型
+### 私聊
+| 消息类型 | 是否响应 | 响应方式 | 输出 | 
+| --- | --- | --- | --- | 
+| 文本(emoji) | √ | 图灵机器人回复 | 消息内容 | 
+| 地图 | o | 图灵机器人回复 | 消息内容 | 
+| 名片 | √ | 固定文本 | 消息内容 | 
+| 通知 | × | - | - | 
+| 分享链接 | √ | 图灵机器人回复 | 消息内容 | 
+| 图片 | √ | 下载 & 回复表情 | 存储位置 | 
+| 语音 | √ | 下载 & 回复表情 | 存储位置 | 
+| 文件 | √ | 下载 & 固定文本 | 存储位置 | 
+| 视频 | o | 下载 & 回复表情 | 存储位置 | 
+| 添加好友 | √ | 加为好友 & 欢迎信息 | - | 
+
+### 群聊
+| 消息类型 | @我 | 是否响应 | 响应方式 | 输出 | 
+| --- | --- | --- | --- | --- | 
+| 文本(emoji) | 是 | √ | 图灵机器人回复 | 消息内容 | 
+| 文本(emoji) | 否 | × | - | 消息内容 | 
+| 图片 | - | √ | 回复表情 | 存储位置 | 
+| 其他 | - | × | - | - | 
+
+
+## TODO
+ - 兼容性提升
+ - 完善、增加新消息类型
+
+## 问题建议
+任何问题和建议均可提出 Issue 讨论。
+
+## 协议
+[MIT](./LICENSE)
