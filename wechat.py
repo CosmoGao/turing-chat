@@ -197,28 +197,24 @@ def fri_reply(msg):
 def group_reply(msg):
     if msg['isAt']:
         reply = talk(msg['Content'], md5(msg['ActualUserName']))
-        print(
-            '------------------------------------------------------------------------------')
-        print('%s在群聊中对您说：%s' % (msg['ActualNickName'], msg['Content']))
+        print('------------------------------------------------------------------------------')
+        print('%s在群聊中对您说：%s' % (msg['ActualNickName'], msg['Content'].replace('\u2005',' ')))
         print('AI帮您回复%s：%s' % (msg['ActualNickName'], reply))
-        print(
-            '------------------------------------------------------------------------------')
-        itchat.send('@%s\u2005 %s' % (msg['ActualNickName'], reply), msg['FromUserName'])
+        print('------------------------------------------------------------------------------')
+        itchat.send('@%s %s' % (msg['ActualNickName'], reply), msg['FromUserName'])
     else:
-        print(
-            '------------------------------------------------------------------------------')
+        print('------------------------------------------------------------------------------')
         print('%s在群聊中说：%s' % (msg['ActualNickName'], msg['Content']))
-        print(
-            '------------------------------------------------------------------------------')
+        print('------------------------------------------------------------------------------')
 
 
 @itchat.msg_register(itchat.content.PICTURE, isGroupChat=True)
 def grouppic_reply(msg):
-    print(msg)
+    msg['Text']('./images/group/' + msg['FileName'])
     print('------------------------------------------------------------------------------')
     print('%s在群聊中发了一个表情/图片，已经帮您存入images/group目录，文件名为：%s' % (msg['ActualNickName'], msg['FileName']))
     print('------------------------------------------------------------------------------')
-    itchat.send('@img@./images/group/default.gif', msg['FromUserName'])
+    itchat.send('@img@./images/default.gif', msg['FromUserName'])
 
 if __name__ == '__main__':
     checkapi()
