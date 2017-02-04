@@ -17,7 +17,7 @@ turing-chat是一个开源的微信聊天机器人，基于 [littlecodersh](http
     - ItChat
 
         ```bash
-        pip install ItChat
+        pip install itchat
         ```
 1. 注册图灵机器人API，并在同级目录建立“api.inf”文件，将API写入首行
 
