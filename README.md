@@ -1,5 +1,5 @@
 # turing-chat
-![py27][py27] ![Bless](http://lunagao.github.io/BlessYourCodeTag/)
+![python](https://img.shields.io/badge/python-2.7-ff69b4.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag)
 
 turing-chat是一个开源的微信聊天机器人，基于[littlecodersh](https://github.com/littlecodersh)的[ItChat](https://github.com/littlecodersh/ItChat)项目， 接入[图灵机器人](http://www.tuling123.com/)提供自然语言回复。
 
