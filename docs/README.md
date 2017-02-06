@@ -61,4 +61,4 @@ git clone git@github.com:CosmoGao/turing-chat.git
 Any issues and suggestions may be discussed.
 
 ## License
-[MIT](./LICENSE)
+[MIT](/LICENSE)
