@@ -17,7 +17,7 @@ def main():
 def checkapi():
     try:
         inf = open('api.inf', 'r')
-        api = inf.readline()
+        api = inf.readline().replace('\n','')
         inf.close()
     except:
         print('请前往 http://www.tuling123.com 申请机器人API，并填写在相同目录下的“api.inf”文件首行！')
