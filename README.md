@@ -1,16 +1,20 @@
 # turing-chat
-![python](https://img.shields.io/badge/python-2.7-ff69b4.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag)
+![python](https://img.shields.io/badge/python-2.7-ff69b4.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag) [English](./docs/README.md)
 
 turing-chat是一个开源的微信聊天机器人，基于 [littlecodersh](https://github.com/littlecodersh) 的 [ItChat](https://github.com/littlecodersh/ItChat) 项目， 接入[图灵机器人](http://www.tuling123.com/)提供自然语言回复。
 
 ## 快速开始
-1. 下载项目中的wechat.py文件
+1. 下载/克隆所有文件
+
+```bash
+git clone git@github.com:CosmoGao/turing-chat.git
+```
 
 1. 安装Python及依赖包
 
     - requests
 
-        ```shell
+        ```bash
         pip install requests
         ```
     

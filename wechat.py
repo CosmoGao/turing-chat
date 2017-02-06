@@ -199,7 +199,7 @@ def group_reply(msg):
         reply = talk(msg['Content'], md5(msg['ActualUserName']))
         print(
             '------------------------------------------------------------------------------')
-        print('%s在群聊中对您说：%s' % (msg['ActualNickName'], msg['Content'].replace('\u2005',' '))
+        print('%s在群聊中对您说：%s' % (msg['ActualNickName'], msg['Content'].replace('\u2005',' ')))
         print('AI帮您回复%s：%s' % (msg['ActualNickName'], reply))
         print(
             '------------------------------------------------------------------------------')
