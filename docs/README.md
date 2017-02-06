@@ -1,4 +1,6 @@
-# turing-chat ![python](https://img.shields.io/badge/python-2.7-ff69b4.svg)![python3.5](https://img.shields.io/badge/python-3.5-blue.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag) [中文版](/README.md)
+# turing-chat ![python](https://img.shields.io/badge/python-2.7-ff69b4.svg)![python3.5](https://img.shields.io/badge/python-3.5-blue.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag) 
+
+**[中文版](/README.md)**
 
 **turing-chat** is an open source WeChat robot based on  [littlecodersh](https://github.com/littlecodersh)'s [ItChat](https://github.com/littlecodersh/ItChat) project, and access to the [tuling123](http://www.tuling123.com/) service to provide natural language response (which only support Chinese).
 
