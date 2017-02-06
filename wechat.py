@@ -5,12 +5,12 @@ from __future__ import unicode_literals
 import json
 import itchat
 import requests
-
+import platform
 # 登录和初始化
 
 
 def main():
-    itchat.auto_login(enableCmdQR=True)
+    itchat.auto_login(enableCmdQR=True + (platform.system() == 'Linux'))
     itchat.run()
 
 
