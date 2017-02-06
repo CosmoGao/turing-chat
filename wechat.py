@@ -56,7 +56,7 @@ def talk(info, userid=None):
 def md5(str):
     import hashlib
     md = hashlib.md5()
-    md.update(str)
+    md.update(str.encode('utf-8'))
     return md.hexdigest()
 
 # 注册微信消息
