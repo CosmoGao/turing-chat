@@ -1,6 +1,6 @@
 # turing-chat 
 
-![python](https://img.shields.io/badge/python-2.7-ff69b4.svg) ![python3.5](https://img.shields.io/badge/python-3.5-blue.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag) [![apm](https://img.shields.io/apm/l/vim-mode.svg)](/LICENSE)     **[English](/docs/README.md)**
+![python](https://img.shields.io/badge/python-2.7-red.svg) ![python3.5](https://img.shields.io/badge/python-3.5-blue.svg) [![AllahBless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](https://github.com/LunaGao/BlessYourCodeTag) [![apm](https://img.shields.io/apm/l/vim-mode.svg)](/LICENSE)     **[English](/docs/README.md)**
 
 turing-chat是一个开源的微信聊天机器人，基于 [littlecodersh](https://github.com/littlecodersh) 的 [ItChat](https://github.com/littlecodersh/ItChat) 项目， 接入[图灵机器人](http://www.tuling123.com/)提供自然语言回复。
 
