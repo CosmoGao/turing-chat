@@ -11,7 +11,7 @@ import platform
 
 def main():
     itchat.auto_login(enableCmdQR=True + (platform.system() == 'Linux'))
-    itchat.run(debug = True)
+    itchat.run()
 
 
 def checkapi():
