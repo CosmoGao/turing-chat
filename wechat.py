@@ -11,7 +11,7 @@ import platform
 
 def main():
     itchat.auto_login(enableCmdQR=True + (platform.system() == 'Linux'))
-    itchat.run()
+    itchat.run(debug = True)
 
 
 def checkapi():
@@ -144,17 +144,35 @@ def pic_reply(msg):
 
 @itchat.msg_register(itchat.content.RECORDING)
 def rec_reply(msg):
+    # 是否开启语音识别，需要安装ffmpeg和pydub
+    enable_voice_rec = False
     msg['Text']('./records/' + msg['FileName'])
     User = itchat.search_friends(userName=msg['FromUserName'])
     if User['RemarkName'] == '':
         NickName = User['NickName']
     else:
         NickName = '%s(%s)' % (User['NickName'], User['RemarkName'])
-    print('------------------------------------------------------------------------------')
-    print('%s给您发送了一条语音，已经存入records目录，文件名：%s' % (NickName, msg['FileName']))
-    print('AI帮您回复%s默认表情default.gif' % NickName)
-    print('------------------------------------------------------------------------------')
-    return '@img@./records/default.gif'
+
+    if enable_voice_rec:
+        msg['Text']('./records/' + msg['FileName'])
+        from beta import wav2text
+        wav2text.transcode('./records/' + msg['FileName'])
+        filename = msg['FileName'].replace('mp3','wav')
+        text = wav2text.wav_to_text('./records/' + filename)        # 此处出现问题，返回值会出现一个None
+        print text      
+        reply = talk(text, md5(msg['FromUserName']))       
+        print('------------------------------------------------------------------------------')
+        print('%s给您发送了一条语音，已经存入records目录，文件名：%s' % (NickName, msg['FileName']))
+        print('智能识别该消息内容为：%s' % text)
+        print('AI帮您回复%s：%s' % (NickName, reply))
+        print('------------------------------------------------------------------------------')
+        return reply
+    else:
+        print('------------------------------------------------------------------------------')
+        print('%s给您发送了一条语音，已经存入records目录，文件名：%s' % (NickName, msg['FileName']))
+        print('AI帮您回复%s默认表情default.gif' % NickName)
+        print('------------------------------------------------------------------------------')
+        return '@img@./records/default.gif'
 
 
 @itchat.msg_register(itchat.content.ATTACHMENT)
