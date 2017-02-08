@@ -59,7 +59,6 @@ git clone git@github.com:CosmoGao/turing-chat.git
  - Improve and add new message types
 
 ## Experimental Feature
-尝试利用百度的语音识别API对好友语音进行识别并回复，需要安装 [ffmpeg](http://ffmpeg.org/) 和 [pydub](https://github.com/jiaaro/pydub) 包，并在 wechat.py 中将 `enable_voice_rec` 置为`True`。
 Try to recongnize friends' recording messages with Baidu's REST API. To enable the feature, [ffmpeg](http://ffmpeg.org/) and [pydub](https://github.com/jiaaro/pydub) package is required, and you have to set the value of enable_voice_rec to True in wechat.py file.
 
 ## Issues and Suggestions
