@@ -145,7 +145,7 @@ def pic_reply(msg):
 @itchat.msg_register(itchat.content.RECORDING)
 def rec_reply(msg):
     # 是否开启语音识别，需要安装ffmpeg和pydub
-    enable_voice_rec = True
+    enable_voice_rec = False
     msg['Text']('./records/' + msg['FileName'])
     User = itchat.search_friends(userName=msg['FromUserName'])
     if User['RemarkName'] == '':
