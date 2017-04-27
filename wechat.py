@@ -145,7 +145,7 @@ def pic_reply(msg):
 @itchat.msg_register(itchat.content.RECORDING)
 def rec_reply(msg):
     # 是否开启语音识别，需要安装ffmpeg和pydub
-    enable_voice_rec = False
+    enable_voice_rec = True
     msg['Text']('./records/' + msg['FileName'])
     User = itchat.search_friends(userName=msg['FromUserName'])
     if User['RemarkName'] == '':
@@ -158,8 +158,7 @@ def rec_reply(msg):
         from beta import wav2text
         wav2text.transcode('./records/' + msg['FileName'])
         filename = msg['FileName'].replace('mp3','wav')
-        text = wav2text.wav_to_text('./records/' + filename)        # 此处出现问题，返回值会出现一个None
-        print text      
+        text = wav2text.wav_to_text('./records/' + filename)
         reply = talk(text, md5(msg['FromUserName']))       
         print('------------------------------------------------------------------------------')
         print('%s给您发送了一条语音，已经存入records目录，文件名：%s' % (NickName, msg['FileName']))
